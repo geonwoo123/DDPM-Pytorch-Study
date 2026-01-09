@@ -83,9 +83,23 @@ $$ L_{\text{simple}} = \mathbb{E}_{t, x_0, \epsilon} \left[ \| \epsilon - \epsil
 
 ---
 
-## 5. Results (Optional)
-*Visualizing the generation results.*
+## 5. Generation Results
 
-| Noisy ($t=1000$) | Denoised ($t=500$) | Generated ($t=0$) |
-| :---: | :---: | :---: |
-| ![Noisy](https://via.placeholder.com/150) | ![Mid](https://via.placeholder.com/150) | ![Final](https://via.placeholder.com/150) |
+I verified the model's performance by testing it on two different datasets.
+First, I reproduced the results using the standard Fashion MNIST dataset to verify the baseline logic. Then, **I modified the code to support RGB channels** and trained it on a custom Pokemon dataset.
+
+| **Baseline: Fashion MNIST** | **Application: Pokemon (Custom)** |
+| :---: | :---: |
+| <img src="./results/fashion_mnist_sample.png" width="300" alt="Fashion MNIST"> | <img src="./ddpm_epoch100_poketmon.png" width="300" alt="Pokemon Generated"> |
+| *Initial verification (Grayscale, 28x28)* | *Code modified for RGB (Epoch 100)* |
+
+### 🛠️ Code Modifications & Analysis
+To transition from Fashion MNIST to the Pokemon dataset, I made the following adjustments to the U-Net architecture:
+
+1.  **Channel Adaptation:**
+    *   Changed input/output channels from `1` (Grayscale) to `3` (RGB).
+    *   Modified the `Unet` class initialization: `channels=3`.
+2.  **Data Preprocessing:**
+    *   Updated `torchvision.transforms` to normalize RGB values to $[-1, 1]$.
+3.  **Result Analysis (Pokemon):**
+    *   The generated image (Right) shows features resembling a mix of *Cubone (탕구리)* and *Kangaskhan*, indicating the model successfully learned the color distribution and morphological features of the dataset.|
