@@ -4,13 +4,14 @@
 > **Original Code Source:** [The Annotated Diffusion Model (Hugging Face)](https://huggingface.co/blog/annotated-diffusion)
 
 ## 1. Project Overview
-This repository is dedicated to a deep dive into the architecture and mathematics of **DDPM**.
-Instead of simply running the model, I focused on **analyzing the correspondence between the paper's mathematical formulas and the actual PyTorch implementation**. 
+This repository is dedicated to a deep dive into the architecture and mathematics of DDPM. Instead of simply running the model, I focused on analyzing the correspondence between the paper's mathematical formulas and the actual PyTorch implementation.
 
-I have added detailed **line-by-line comments** to the source code and documented my study process to demonstrate a thorough understanding of the logic.
+I have added detailed line-by-line comments to the source code to demonstrate a thorough understanding of the logic. **Furthermore, based on this analysis, I utilized the code as a framework to implement a custom generation task. I sourced the "Pokemon Image Dataset" from Kaggle and modified the model to successfully generate new Pokemon images.**
 
-*   **Objective:** Mathematical verification & Code logic analysis.
-*   **Method:** Annotated the original source code and created detailed study notes.
+*   **Objective:** Mathematical verification, Code logic analysis, and **Practical Application (Custom Dataset Training).**
+*   **Method:**
+    1.  Annotated the original source code with mathematical explanations.
+    2.  **Refactored the code to train on the Kaggle Pokemon dataset and generated RGB images.**
 
 ---
 
