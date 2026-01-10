@@ -16,20 +16,14 @@ I have added detailed line-by-line comments to the source code to demonstrate a 
 ---
 
 ## 2. 📝 Study Notes & Annotations
-To fully understand the mathematical derivation (especially the Reverse Process), I studied using existing lecture materials and added my own analysis.
+To fully understand the mathematical derivation, I utilized existing lecture materials and added my own analysis directly onto the slides.
 
-*   **Reference Material:** [Name of the Lecture/Slide Author] (e.g., *CVPR 2022 Tutorial on Diffusion Models*)
-*   **My Contribution:** Added handwritten notes explaining the derivation of the ELBO and variance scheduling.
+*   **Reference Material:** [Name of the Lecture/Slide Author] (e.g., CVPR 2022 Tutorial on Diffusion Models)
+*   **My Contribution:** I annotated the original slides with **handwritten notes**, specifically focusing on a detailed analysis of the mathematical significance behind the **Forward and Reverse process equations**.
 
-> **👇 Click to view my full study log:**
-> 
-> 📎 **[View Annotated Study Notes (PDF)](./docs/DDPM_Study_Notes.pdf)**
+👇 **Click to view my annotated study log:**
 
-**[Preview of My Analysis]**
-*(I focused on why the model predicts noise $\epsilon$ instead of $x_0$ directly)*
-
-<img src="./docs/note_preview.png" width="700" alt="Study Note Preview">
-<!-- ⚠️ Replace 'note_preview.png' with your actual screenshot filename -->
+📎 [**View Slides with My Handwritten Notes (PDF)**](./my_study_notes.pdf)
 
 ---
 
