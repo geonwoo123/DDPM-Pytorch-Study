@@ -125,7 +125,9 @@ First, I reproduced the results using the standard Fashion MNIST dataset to veri
 
 | **Baseline: Fashion MNIST** | **Application: Pokemon (Custom)** |
 | :---: | :---: |
-| <img src="./results/fashion_mnist_sample.png" width="300" alt="Fashion MNIST"> | <img src="./ddpm_epoch100_poketmon.png" width="300" alt="Pokemon Generated"> |
+| <img src="<img width="416" height="413" alt="image" src="https://github.com/user-attachments/assets/94a57729-a1d6-4e20-a637-0830db097fcc" />
+> | <img src="<img width="404" height="427" alt="image" src="https://github.com/user-attachments/assets/bc585569-9dc4-418c-afbb-3fd7d7e681f2" />
+"> |
 | *Initial verification (Grayscale, 28x28)* | *Code modified for RGB (Epoch 125)* |
 
 ### 🛠️ Code Modifications & Analysis
