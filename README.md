@@ -22,9 +22,9 @@ To fully understand the mathematical derivation, I utilized existing lecture mat
 *   **My Contribution:** I annotated the original slides with **handwritten notes**, specifically focusing on a detailed analysis of the mathematical significance behind the **Forward and Reverse process equations**.
 
 ### 👁️ Preview
-<!-- 아래에 캡처한 이미지 파일 이름(note_preview.png)이 정확해야 합니다 -->
-"<img width="1197" height="668" alt="image" src="https://github.com/user-attachments/assets/c80c2a99-9152-4549-b3c3-d97ad210109a" />
-"
+
+<img width="1197" height="668" alt="image" src="https://github.com/user-attachments/assets/c80c2a99-9152-4549-b3c3-d97ad210109a" />
+
 
 <br>
 
