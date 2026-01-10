@@ -23,13 +23,14 @@ To fully understand the mathematical derivation, I utilized existing lecture mat
 
 ### 👁️ Preview
 <!-- 아래에 캡처한 이미지 파일 이름(note_preview.png)이 정확해야 합니다 -->
-<img src="./note_preview.png" alt="Study Note Preview" width="700" style="border: 1px solid #ddd; border-radius: 5px;">
+"<img width="1197" height="668" alt="image" src="https://github.com/user-attachments/assets/c80c2a99-9152-4549-b3c3-d97ad210109a" />
+"
 
 <br>
 
 👇 **Want to see more details?**
 
-📎 [**Click here to view the FULL Study Log (PDF)**](./my_study_notes.pdf)
+📎 [**Click here to view the FULL Study Log (PDF)**]([./my_study_notes.pdf](https://golden-teal-c9gvhngbnp.edgeone.app/ddpm_study.pdf))
 
 ---
 
