@@ -77,7 +77,6 @@ def p_sample(model, x, t, t_index):
     else:
         posterior_variance_t = extract(posterior_variance, t, x.shape) 
         noise = torch.randn_like(x)                            
-        # 알고리즘 2, 4번째 줄: 평균 + σ_t * ε  (ε ~ N(0, I))
         return model_mean + torch.sqrt(posterior_variance_t) * noise
 ```
 
@@ -92,9 +91,7 @@ def p_losses(denoise_model, x_start, t, noise=None):
         noise = torch.randn_like(x_start)
 
     x_noisy = q_sample(x_start=x_start, t=t, noise=noise)
-
     predicted_noise = denoise_model(x_noisy, t)
-
     loss = F.mse_loss(noise, predicted_noise)
 
     return loss
