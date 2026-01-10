@@ -21,9 +21,15 @@ To fully understand the mathematical derivation, I utilized existing lecture mat
 *   **Reference Material:** [Name of the Lecture/Slide Author] (e.g., CVPR 2022 Tutorial on Diffusion Models)
 *   **My Contribution:** I annotated the original slides with **handwritten notes**, specifically focusing on a detailed analysis of the mathematical significance behind the **Forward and Reverse process equations**.
 
-👇 **Click to view my annotated study log:**
+### 👁️ Preview
+<!-- 아래에 캡처한 이미지 파일 이름(note_preview.png)이 정확해야 합니다 -->
+<img src="./note_preview.png" alt="Study Note Preview" width="700" style="border: 1px solid #ddd; border-radius: 5px;">
 
-📎 [**View Slides with My Handwritten Notes (PDF)**](./my_study_notes.pdf)
+<br>
+
+👇 **Want to see more details?**
+
+📎 [**Click here to view the FULL Study Log (PDF)**](./my_study_notes.pdf)
 
 ---
 
