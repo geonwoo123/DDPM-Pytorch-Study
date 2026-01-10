@@ -110,10 +110,11 @@ def p_losses(denoise_model, x_start, t, noise=None):
 **Insight:** Initially, I assumed the model reconstructs the image $x_0$ directly.
 **Correction:** Through code analysis, I realized the model predicts the noise component $\epsilon$. This makes the training objective mathematically equivalent to score matching and provides more stable gradients.
 
-**📉 Hyperparameter Tuning (Epoch Selection)**
+📉 Hyperparameter Tuning (Epoch Selection)
 **Observation:** During the Pokemon generation task, I compared results between 120 epochs and 300 epochs.
-**Insight:** The generated images exhibited **clearer shapes and features at 120 epochs** compared to 300 epochs, where quality seemed to degrade.
-**Conclusion:** I realized that more training is not always better. **Identifying the optimal number of epochs** to prevent overfitting was essential for generating high-quality images.
+**Insight:** The generated images exhibited clearer shapes and features at 120 epochs compared to 300 epochs, where image quality began to degrade with increased noise/artifacts.
+**Conclusion:** I realized that more training does not always guarantee better results due to potential **training instability**. Identifying the **optimal stopping point** was essential for maintaining high-quality image generation.
+
 
 ## 5. Generation Results
 
