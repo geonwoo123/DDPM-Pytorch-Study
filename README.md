@@ -18,7 +18,7 @@ I have added detailed line-by-line comments to the source code to demonstrate a 
 ## 2. 📝 Study Notes & Annotations
 To fully understand the mathematical derivation, I utilized existing lecture materials and added my own analysis directly onto the slides.
 
-*   **Reference Material:** [Name of the Lecture/Slide Author] (e.g., CVPR 2022 Tutorial on Diffusion Models)
+*   **Reference Material:** [CVPR 2022 Tutorial on Diffusion Models]
 *   **My Contribution:** I annotated the original slides with **handwritten notes**, specifically focusing on a detailed analysis of the mathematical significance behind the **Forward and Reverse process equations**.
 
 ### 👁️ Preview
@@ -100,7 +100,7 @@ def p_losses(denoise_model, x_start, t, noise=None):
 
 ---
 
-### Key Learnings & Troubleshooting
+### 4. Key Learnings & Troubleshooting
 
 **🔍 Tensor Dimension Mismatch**
 **Issue:** Encountered RuntimeError during the broadcasting step when adding noise.
