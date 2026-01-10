@@ -126,7 +126,7 @@ First, I reproduced the results using the standard Fashion MNIST dataset to veri
 | **Baseline: Fashion MNIST** | **Application: Pokemon (Custom)** |
 | :---: | :---: |
 | <img src="./results/fashion_mnist_sample.png" width="300" alt="Fashion MNIST"> | <img src="./ddpm_epoch100_poketmon.png" width="300" alt="Pokemon Generated"> |
-| *Initial verification (Grayscale, 28x28)* | *Code modified for RGB (Epoch 100)* |
+| *Initial verification (Grayscale, 28x28)* | *Code modified for RGB (Epoch 125)* |
 
 ### 🛠️ Code Modifications & Analysis
 To transition from Fashion MNIST to the Pokemon dataset, I made the following adjustments to the U-Net architecture:
