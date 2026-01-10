@@ -30,7 +30,7 @@ To fully understand the mathematical derivation, I utilized existing lecture mat
 
 👇 **Want to see more details?**
 
-📎 [**Click here to view the FULL Study Log (PDF)**]([./my_study_notes.pdf](https://golden-teal-c9gvhngbnp.edgeone.app/ddpm_study.pdf))
+📎 [**Click here to view the FULL Study Log (PDF)**](./ddpm_study.pdf)
 
 ---
 
