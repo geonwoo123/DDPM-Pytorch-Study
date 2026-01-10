@@ -42,11 +42,16 @@ The process of gradually adding Gaussian noise to the image.
 $$ q(x_t | x_0) = \mathcal{N}(x_t; \sqrt{\bar{\alpha}_t} x_0, (1 - \bar{\alpha}_t)\mathbf{I}) $$
 
 ```python
-# [PASTE YOUR CODE HERE]
-# Paste your 'q_sample' code with your comments.
-# Example:
-# def q_sample(x_start, t, noise=None):
-#     ...
+def q_sample(x_start, t, noise=None):
+    if noise is None:
+        noise = torch.randn_like(x_start)
+
+    sqrt_alphas_cumprod_t = extract(sqrt_alphas_cumprod, t, x_start.shape)
+    sqrt_one_minus_alphas_cumprod_t = extract(
+        sqrt_one_minus_alphas_cumprod, t, x_start.shape
+    )
+
+    return sqrt_alphas_cumprod_t * x_start + sqrt_one_minus_alphas_cumprod_t * noise
 ```
 
 ### 3.2 Reverse Process (Denoising)
@@ -55,8 +60,25 @@ The neural network approximates the reverse process to recover the image.
 $$ p_\theta(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(x_t, t)) $$
 
 ```python
-# [PASTE YOUR CODE HERE]
-# Paste your 'p_sample' code with your comments.
+@torch.no_grad()                   
+def p_sample(model, x, t, t_index):
+    betas_t = extract(betas, t, x.shape)
+    sqrt_one_minus_alphas_cumprod_t = extract(
+        sqrt_one_minus_alphas_cumprod, t, x.shape
+    )
+    sqrt_recip_alphas_t = extract(sqrt_recip_alphas, t, x.shape)
+
+    model_mean = sqrt_recip_alphas_t * (
+        x - betas_t * model(x, t) / sqrt_one_minus_alphas_cumprod_t
+    )
+
+    if t_index == 0:                                            
+        return model_mean                                       
+    else:
+        posterior_variance_t = extract(posterior_variance, t, x.shape) 
+        noise = torch.randn_like(x)                            
+        # 알고리즘 2, 4번째 줄: 평균 + σ_t * ε  (ε ~ N(0, I))
+        return model_mean + torch.sqrt(posterior_variance_t) * noise
 ```
 
 ### 3.3 Loss Function
@@ -65,8 +87,17 @@ Optimizing the variational lower bound simplifies to minimizing the MSE between 
 $$ L_{\text{simple}} = \mathbb{E}_{t, x_0, \epsilon} \left[ \| \epsilon - \epsilon_\theta(\sqrt{\bar{\alpha}_t} x_0 + \sqrt{1 - \bar{\alpha}_t}\epsilon, t) \|^2 \right] $$
 
 ```python
-# [PASTE YOUR CODE HERE]
-# Paste your loss calculation code (p_losses) here.
+def p_losses(denoise_model, x_start, t, noise=None):
+    if noise is None:
+        noise = torch.randn_like(x_start)
+
+    x_noisy = q_sample(x_start=x_start, t=t, noise=noise)
+
+    predicted_noise = denoise_model(x_noisy, t)
+
+    loss = F.mse_loss(noise, predicted_noise)
+
+    return loss
 ```
 
 ---
